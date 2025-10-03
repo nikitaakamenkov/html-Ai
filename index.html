@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alliance Production</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Общие стили */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    /* ======= ХЭДЕР ======= */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      padding: 0 30px;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+
+    header nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .phone {
+      margin-right: 15px;
+      color: #fff;
+    }
+
+    .btn {
+      background: #2e9cff;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ======= HERO (первая секция) ======= */
+    .hero {
+      background: url("bg.jpg") center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      color: #fff; /* Белый текст */
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5); /* затемнение */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      line-height: 1.1;
+      margin: 0 0 20px 0;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 0 0 30px 0;
+    }
+
+    .features {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .feat {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      text-align: center;
+      flex: 1;
+      min-width: 160px;
+      margin: 5px;
+      color: #fff;
+    }
+
+    .feat i {
+      font-size: 22px;
+      color: #2e9cff;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    /* ======= ВТОРАЯ СЕКЦИЯ (чёрный текст) ======= */
+    .content-section {
+      background: #ffffff;
+      color: #1a1a1a;
+      padding: 100px 40px 60px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .workflow, .production {
+      margin-top: 40px;
+    }
+
+    .workflow-steps {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .step {
+      flex: 1;
+      text-align: center;
+    }
+
+    .step span {
+      display: block;
+      font-size: 22px;
+      font-weight: bold;
+      color: #446cff;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .step a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0066ff;
+      text-decoration: none;
+    }
+
+    .production-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .production-item {
+      border: 1px solid #ddd;
+      padding: 20px;
+      min-height: 150px;
+      transition: border 0.3s;
+    }
+
+    .production-item:hover {
+      border: 2px solid #4a90e2;
+    }
+
+    .production-item h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .production-item p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .highlight {
+      color: #4a90e2;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Шапка и первая секция -->
+  <header>
+    <div class="logo">
+      <img src="3.png" alt="Alliance Production" height="40">
+    </div>
+    <nav>
+      <a href="#">О компании</a>
+      <a href="#">Контрактное производство</a>
+      <a href="#">Собственные торговые марки</a>
+      <a href="#">Новости</a>
+      <a href="#">Контакты</a>
+    </nav>
+    <div style="display:flex;align-items:center">
+      <div class="phone">+7 (499) 686-10-14</div>
+      <a href="#" class="btn">Получить консультацию</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Комплексное обеспечение товарами<br>и расходными материалами бизнеса</h1>
+      <p>Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от анализа существующих паттернов поведения.</p>
+      <a href="#" class="btn">Подробнее о компании</a>
+    </div>
+    <div class="features">
+      <div class="feat"><i class="fa-solid fa-hourglass-half"></i>Непрерывная работа<br>с 2017 года</div>
+      <div class="feat"><i class="fa-solid fa-certificate"></i>Вся продукция<br>сертифицирована</div>
+      <div class="feat"><i class="fa-solid fa-magnifying-glass"></i>Контроль качества<br>на всех этапах</div>
+      <div class="feat"><i class="fa-solid fa-truck"></i>Возможны поставки<br>по всей России</div>
+      <div class="feat"><i class="fa-solid fa-industry"></i>Оперативное<br>производство</div>
+    </div>
+  </section>
+
+    <h2>СХЕМА РАБОТЫ</h2>
+    <div class="workflow">
+        <div class="workflow-steps">
+            <div class="step">
+                <span>01</span>
+                <p><strong>Знакомство</strong><br>Безусловно, сложившаяся структура профессионального сообщества позволяет оценить значение формы воздействия.<br>
+                <a href="#">Оставить заявку</a></p>
+            </div>
+            <div class="step">
+                <span>02</span>
+                <p><strong>Заключение договора</strong><br>Лишь интерактивные прототипы призваны к ответу.</p>
+            </div>
+            <div class="step">
+                <span>03</span>
+                <p><strong>Производство</strong><br>А также стремящиеся вытеснить традиционное производство...</p>
+            </div>
+            <div class="step">
+                <span>04</span>
+                <p><strong>Доставка</strong><br>Экономическая повестка сегодняшнего дня говорит о возможности...</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>КОНТРАКТНОЕ ПРОИЗВОДСТВО</h2>
+    <div class="production">
+        <div class="production-grid">
+            <div class="production-item">
+                <h3>Автомобильная химия</h3>
+                <p>Безусловно, сложившаяся химия профессионального сообщества позволяет оценить значение формы воздействия.</p>
+            </div>
+            <div class="production-item">
+                <h3 class="highlight">Бытовая химия</h3>
+                <p>А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p>
+            </div>
+            <div class="production-item">
+                <h3>Дезинфицирующие средства</h3>
+                <p>Лишь интерактивные прототипы призваны к ответу.</p>
+            </div>
+            <div class="production-item">
+                <h3>Пищевые аэрозоли</h3>
+                <p>Безусловно, сложившаяся химия профессионального сообщества позволяет оценить значение формы воздействия.</p>
+            </div>
+            <div class="production-item">
+                <h3>Косметическая продукция</h3>
+                <p>Лишь интерактивные прототипы призваны к ответу.</p>
+            </div>
+            <div class="production-item">
+                <h3>Краски аэрозольные</h3>
+                <p>А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
