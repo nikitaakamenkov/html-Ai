@@ -27,7 +27,7 @@
       padding: 0 30px;
       background: rgba(0, 0, 0, 0.3);
       transition: all 0.4s ease;
-      z-index: 10;
+      z-index: 1000;
     }
 
     header.scrolled {
@@ -39,7 +39,7 @@
     .logo {
       position: relative;
       height: 40px;
-      width: 160px; /* фиксированная ширина, чтобы не прыгало */
+      width: 160px;
     }
 
     .logo img {
@@ -52,24 +52,26 @@
     }
 
     #logo-dark {
-      opacity: 0; /* скрыт по умолчанию */
+      opacity: 0;
     }
 
     header.scrolled #logo-dark {
-      opacity: 1; /* при скролле — показываем тёмный */
+      opacity: 1;
     }
 
     header.scrolled #logo-light {
-      opacity: 0; /* прячем белый */
+      opacity: 0;
     }
 
     /* ======= МЕНЮ ======= */
-    header nav {
+    nav {
       display: flex;
       gap: 25px;
+      align-items: center;
+      transition: all 0.3s ease;
     }
 
-    header nav a {
+    nav a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
@@ -102,6 +104,51 @@
 
     .btn:hover {
       background: #187bdb;
+    }
+
+    /* ======= ГАМБУРГЕР ======= */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    header.scrolled .menu-toggle {
+      color: #000;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        color: #000 !important;
+        font-size: 18px;
+        padding: 10px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .phone, .btn {
+        display: none;
+      }
     }
 
     /* ======= HERO ======= */
@@ -254,21 +301,80 @@
     }
   </style>
 </head>
+<style>
+    /* ======= АДАПТИВ ======= */
+    @media (max-width: 900px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        color: #000 !important;
+        font-size: 18px;
+        padding: 10px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .phone, .btn {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+      .hero p {
+        font-size: 15px;
+      }
+      .features {
+        position: static;
+        margin-top: 30px;
+      }
+      .feat {
+        max-width: 100%;
+      }
+      .content-section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
+</head>
 <body>
   <!-- ======= ШАПКА ======= -->
   <header id="header">
     <div class="logo">
-      <img id="logo-light" src="2.png" alt="Alliance Production">
-      <img id="logo-dark" src="1.png" alt="Alliance Production">
+      <img id="logo-light" src="Aliance4.png" alt="Alliance Production">
+      <img id="logo-dark" src="Aliance1.png" alt="Alliance Production">
     </div>
-    <nav>
+
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <nav id="navMenu">
       <a href="#">О компании</a>
       <a href="#">Контрактное производство</a>
       <a href="#">Собственные торговые марки</a>
       <a href="#">Новости</a>
       <a href="#">Контакты</a>
     </nav>
+
     <div style="display:flex;align-items:center">
       <div class="phone">+7 (499) 686-10-14</div>
       <a href="#" class="btn">Получить консультацию</a>
@@ -297,20 +403,20 @@
       <div class="workflow-steps">
         <div class="step">
           <span>01</span>
-          <strong>Знакомство</strong><br>Безусловно, сложившаяся структура профессионального сообщества позволяет оценить значение формы воздействия.<br>
+          <strong>Знакомство</strong><br>Безусловно, сложившаяся структура профессионального сообщества позволяет оценить значение формы воздействия.</br>
           <a href="#">Оставить заявку</a>
         </div>
         <div class="step">
           <span>02</span>
-          <strong>Заключение договора</strong><br>Лишь интерактивные прототипы призваны к ответу.<br>
+          <strong>Заключение договора</strong><br>Лишь интерактивные прототипы призваны к ответу.</br>
         </div>
         <div class="step">
           <span>03</span>
-          <strong>Производство</strong><br>А также стремящиеся вытеснить традиционное производство...<br>
+          <strong>Производство</strong><br>А также стремящиеся вытеснить традиционное производство...</br>
         </div>
         <div class="step">
           <span>04</span>
-          <strong>Доставка</strong><br>Экономическая повестка сегодняшнего дня говорит о возможности...<br>
+          <strong>Доставка</strong><br>Экономическая повестка сегодняшнего дня говорит о возможности...</br>
         </div>
       </div>
     </div>
@@ -348,6 +454,13 @@
 
   <script>
     const header = document.querySelector('header');
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
     window.addEventListener('scroll', () => {
       if (window.scrollY > 80) {
         header.classList.add('scrolled');
