@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alliance Production</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!DOCTYPE html> <html lang="ru"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>Alliance Production</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style> html, body {  margin: 0;
+      padding: 0;font-family: sans-serif;
+      scroll-behavior: smooth;}
+   
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      scroll-behavior: smooth;
-    }
 
-    /* ======= ХЭДЕР ======= */
+
+
+
+/* ======= ХЭДЕР ======= */
     header {
       position: fixed;
       top: 0;
@@ -25,87 +20,34 @@
       justify-content: space-between;
       height: 70px;
       padding: 0 30px;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(16, 14, 116, 0.664);
       transition: all 0.4s ease;
       z-index: 1000;
     }
 
-    header.scrolled {
+header.scrolled {
       background: #fff;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-
-    /* ======= ЛОГОТИП ======= */
-    .logo {
-      position: relative;
-      height: 40px;
-      width: 160px;
-    }
-
-    .logo img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 40px;
-      width: auto;
-      transition: opacity 0.4s ease;
-    }
-
-    #logo-dark {
-      opacity: 0;
-    }
-
-    header.scrolled #logo-dark {
-      opacity: 1;
-    }
-
-    header.scrolled #logo-light {
-      opacity: 0;
-    }
-
+    /* ======= ЛОГОТИП ======= */ .logo { position: relative; height: 40px; width: 160px; }
+    
+    .logo img { position: absolute; top: 0; left: 0; height: 40px; width: auto; transition: opacity 0.4s ease; }
+    
+    #logo-dark { opacity: 0; } header.scrolled #logo-dark { opacity: 1; } header.scrolled #logo-light { opacity: 0; }
+    
     /* ======= МЕНЮ ======= */
-    nav {
-      display: flex;
-      gap: 25px;
-      align-items: center;
-      transition: all 0.3s ease;
-    }
+    
+    nav { display: flex; gap: 25px; align-items: center; transition: all 0.3s ease; }
+    
+  nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+   header.scrolled nav a { color: #000; }
+    .phone { margin-right: 15px; color: #fff; transition: color 0.3s; } header.scrolled .phone { color: #000; } 
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+    .btn { background: #2e9cff; color: #fff; padding: 10px 16px; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background 0.3s, color 0.3s; } 
 
-    header.scrolled nav a {
-      color: #000;
-    }
+    .btn:hover { background: #187bdb; } /* ======= ГАМБУРГЕР ======= */
 
-    .phone {
-      margin-right: 15px;
-      color: #fff;
-      transition: color 0.3s;
-    }
-
-    header.scrolled .phone {
-      color: #000;
-    }
-
-    .btn {
-      background: #2e9cff;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .btn:hover {
-      background: #187bdb;
-    }
-
+   
     /* ======= ГАМБУРГЕР ======= */
     .menu-toggle {
       display: none;
@@ -151,8 +93,10 @@
       }
     }
 
-    /* ======= HERO ======= */
-    .hero {
+
+
+ /* ======= HERO ======= */
+.hero {
       background: url("bg.jpg") center/cover no-repeat;
       min-height: 100vh;
       display: flex;
@@ -162,7 +106,9 @@
       text-align: center;
       position: relative;
       color: #fff;
-    }
+}
+
+
 
     .hero::before {
       content: "";
@@ -220,9 +166,15 @@
       margin-bottom: 8px;
       display: block;
     }
+       
 
-    /* ======= ВТОРАЯ СЕКЦИЯ ======= */
-    .content-section {
+
+
+
+
+
+     /* ======= ВТОРАЯ СЕКЦИЯ ======= */ 
+.content-section {
       background: #ffffff;
       color: #1a1a1a;
       padding: 100px 40px 60px;
@@ -299,11 +251,10 @@
     .highlight {
       color: #4a90e2;
     }
-  </style>
-</head>
-<style>
-    /* ======= АДАПТИВ ======= */
-    @media (max-width: 900px) {
+
+    </style> </head>
+     <style> /* ======= АДАПТИВ ======= */ 
+ @media (max-width: 900px) {
       nav {
         position: absolute;
         top: 70px;
@@ -354,120 +305,945 @@
       }
     }
   </style>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px; 
+
+        /* необязательно — просто красиво */ } 
+       :root{ --bg:#f6f8fb; --card:#ffffff; --accent:#2b79d9; --muted:#ffffff; --max-width:1160px; --gap:32px; } *{box-sizing:border-box}
+       
+       html,body{height:100%} body{ margin:0; font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#1c2340; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.45; } 
+       
+       /* Секция-обёртка */ 
+       .section { max-width:var(--max-width); margin:48px auto; padding:24px; }
+       
+       /* Карточка с колонками */ 
+       .two-col { display:grid; grid-template-columns: 1fr 460px; 
+        
+        /* левая гибкая, правая фиксированная */ gap: var(--gap); align-items:stretch; background:transparent; } 
+       
+       /* Левая колонка — изображение */
+       
+       .left { position:relative; overflow:hidden; border-radius:12px; min-height:380px; 
+        
+        /* тень и обводка похожие на макет */ box-shadow: 0 6px 20px rgba(20,30,60,0.08); } 
+        
+        .left img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center; transform:scale(1.02); 
+          transition: transform .5s ease; } .left:hover img{ transform:scale(1.05); }
+        
+        /* Правая колонка — текст */ 
+        
+        
+        .right { background:var(--card); border-radius:12px; padding:40px 36px; display:flex; flex-direction:column; 
+          justify-content:center; box-shadow: 0 6px 18px rgba(20,30,60,0.04); 
+          position:relative; min-height:380px; } 
+        
+        /* Акцентная тонкая линия сверху (как на скриншоте) */ 
+        
+        .accent-line { position:absolute; left:36px; top:20px; width:36px; 
+          height:3px; background:var(--accent);
+           border-radius:2px; opacity:0.95; }
+        
+        h2 { margin:8px 0 14px 0; font-size:30px; line-height:1.05;
+           font-weight:700; letter-spacing:-0.02em; } 
+        
+        p.lead { margin:0 0 18px 0; color:var(--muted); font-size:15px; } p { margin:0 0 12px 0; color:#2b374d; font-size:15px; } 
+       
+       .meta { margin-top:18px; display:flex;
+         align-items:center;
+          gap:14px; justify-content:flex-start; } 
+       
+       .more-link{ color:var(--accent);
+         font-weight:600;
+          text-decoration:none;
+           display:inline-flex; gap:8px;
+            align-items:center; }
+       
+       .more-link svg{ transform:translateX(0);
+         transition:transform .18s ease; }
+        
+       .more-link:hover svg{ transform:translateX(6px); }
+
+        /* Вертикальная пунктирная направляющая (элемент дизайна справа от текста) */
+
+         .guide { position:absolute; right:-22px;
+           top:24px; bottom:24px; width:1px; border-right:2px dashed rgba(40,60,90,0.06); transform:translateX(0);
+
+           } /* Небольшой значок справа (как 'm' в скриншоте) */
+
+           .badge { position:absolute; right:-10px;
+             top:12px; width:30px; height:30px;
+              border-radius:50%; background: #eaf2ff;
+               color:var(--accent);
+                display:flex;
+                 align-items:center;
+                  justify-content:center; 
+                  font-weight:700;
+                   font-size:14px; box-shadow:0 6px 14px rgba(40,70,160,0.06); } 
+
+        /* Адаптивность */
+    @media (max-width:980px){
+      .two-col{ grid-template-columns: 1fr 380px; }
+      .right{ padding:28px; }
+      h2{ font-size:26px; }
+    }
+@media (max-width:720px){
+      .two-col{
+        grid-template-columns:1fr;
+      }
+      .right{
+        order:2;
+        margin-top:18px;
+        min-height:auto;
+      }
+      .left{
+        order:1;
+        min-height:260px;
+      }
+      .guide, .badge { display:none; }
+    }
+
+    /* Доп. мелкие стили для читабельности */
+    .kicker {
+      color:var(--muted);
+      font-size:13px;
+      font-weight:600;
+      margin-bottom:8px;
+      text-transform:uppercase;
+      letter-spacing:0.09em;
+    }
+
+      
+      /* ====== АДАПТИВ ====== */
+@media (max-width: 900px) {
+  /* Прячем блок контактов */
+  .contact-block {
+    display: none;
+  }
+
+  /* Показываем гамбургер */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Прячем меню по умолчанию */
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Активное меню */
+  nav.active {
+    display: flex;
+    animation: slideDown 0.3s ease;
+  }
+
+  nav a {
+    color: #000 !important;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  /* Анимация */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    header.scrolled .menu-toggle {
+      color: #000;
+    }
+
+ 
+/* Скрыть на десктопе, показать на мобильных */
+.mobile-only-image {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .mobile-only-image {
+        display: block;
+    }
+}
+
+
+.logos-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: auto;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.logo-item {
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.logo-item img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+}
+
+.logo-caption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .logos-container {
+        justify-content: center;
+        margin-left: 0;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .logo-item img {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logos-container {
+        gap: 10px;
+    }
+    
+    .logo-item img {
+        max-width: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+      </style> </head> <body>
+           <!-- ======= ШАПКА ======= --> 
+            <!-- иконка телефона справа --> 
+
+
+
+
+
+
+
+
+             <header id="header"> <div class="logo"> 
+              <img id="logo-light" src="Aliance4.png" alt="Alliance Production">
+               <img id="logo-dark" src="Aliance1.png" alt="Alliance Production"> </div>
+
+
+  
+
+<img src="8.png" alt="Описание" class="mobile-only-image">
+
+
+
+
+
+
+            <div class="menu-toggle" id="menuToggle"> 
+              <i class="fa-solid fa-bars"></i> </div> <nav id="navMenu">
+  
+          
+          <a href="#">О компании</a> <a href="#">Контрактное производство</a> 
+          <a href="#">Собственные торговые марки</a>
+           <a href="#">Новости</a> <a href="#">Контакты</a> 
+          </nav> <div style="display:flex;align-items:center"> 
+            <div class="phone">+7 (499) 686-10-14</div> 
+            <a href="#" class="btn">Получить консультацию</a> </div> 
+          
+          </header> <!-- ======= HERO ======= --> <section class="hero"> 
+            
+            <div class="hero-content"> 
+              
+              <h1 style="color: rgb(241, 237, 237);">Комплексное обеспечение товарами<br>и расходными материалами бизнеса</h1> 
+              
+              <p style="color: rgb(247, 239, 239);">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством того, что успех зависит от анализа и качества решений.</p> 
+              
+              <a href="#" class="btn">Подробнее о компании</a> </div>
+               <div class="features"> 
+                
+                <div class="feat"><i class="fa-solid fa-hourglass-half"></i>Непрерывная работа<br>с 2017 года</div> 
+                
+                <div class="feat"><i class="fa-solid fa-certificate">
+
+        </i>Вся продукция<br>сертифицирована</div> 
+          <div class="feat"><i class="fa-solid fa-magnifying-glass"></i>Контроль качества<br>на всех этапах</div> 
+          <div class="feat"><i class="fa-solid fa-truck"></i>Поставки<br>по всей России</div> 
+          
+          <div class="feat"><i class="fa-solid fa-industry"></i>Оперативное<br>производство</div> 
+        </div> </section> <div class="content-section"> 
+         <h2>СХЕМА РАБОТЫ</h2> 
+         <div class="workflow"> <div class="workflow-steps">
+         <div class="step"> <span>01</span>
+          <strong>Знакомство</strong>
+          <br>Безусловно, сложившаяся структура профессионального сообщества позволяет оценить значение формы воздействия.</br>
+           <a href="#">Оставить заявку</a> </div> <div class="step"> 
+           <span>02</span> <strong>Заключение договора</strong>
+           <br>Лишь интерактивные прототипы призваны к ответу.</br> 
+           </div> <div class="step"> 
+             <span>03</span>
+            <strong>Производство</strong><br>А также стремящиеся вытеснить традиционное производство...</br>
+            </div> <div class="step"> <span>04</span> <strong>Доставка</strong>
+             <br>Экономическая повестка сегодняшнего дня говорит о возможности...</br> </div>
+             </div> </div> <h2>КОНТРАКТНОЕ ПРОИЗВОДСТВО</h2> 
+             <div class="workflow"> 
+              <div class="workflow-steps"> 
+              <div class="step"> 
+
+
+
+
+
+
+
+<!-- ======= МОБИЛЬНАЯ СЕТКА — ТОЛЬКО ДЛЯ ТЕЛЕФОНОВ ======= -->
+<div class="mobile-grid">
+  <div class="grid-item"><img src="34.png" alt="Автомобильная химия"></div>
+  <div class="grid-item"><img src="35.png" alt="Бытовая химия"></div>
+  <div class="grid-item"><img src="36.png" alt="Дезинфицирующие средства"></div>
+  <div class="grid-item"><img src="36.png" alt="AG-Tech"></div>
+  <div class="grid-item"><img src="35.png" alt="AP"></div>
+  <div class="grid-item"><img src="34.png" alt="Продукт 1"></div>
+</div>
+
+<style>
+/* ======= По умолчанию скрыто ======= */
+.mobile-grid {
+  display: none;
+}
+
+/* ======= Только на телефонах ======= */
+@media (max-width: 768px) {
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+    justify-items: center;
+    background: #ffffff;
+  }
+
+  .mobile-grid .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-grid img {
+    width: 120px; /* увеличенные картинки */
+    height: auto;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    filter: grayscale(100%);
+    opacity: 0.8;
+  }
+
+  .mobile-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+/* ======= На ПК и планшетах скрываем ======= */
+@media (min-width: 769px) {
+  .mobile-grid {
+    display: none !important;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+         <center> 
+          <style>
+@media (max-width: 768px) {
+  .production {
+    display: none;
+  }
+}
+</style>
+          
+          <div class="production"> <div class="production-grid">
+            
+
+            <div class="production-item"> <h3>Автомобильная химия</h3>
+
+           <p style="color: rgb(0, 0, 0);">Безусловно, сложившаяся химия профессионального сообщества позволяет оценить значение формы воздействия.</p>
+           <img id="logo-light" src="36.png"> </div> <div class="production-item"> 
+            
+            <h3 class="highlight">Бытовая химия</h3> 
+           <p style="color: rgb(0, 0, 0);">А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p> 
+              <img id="logo-light" src="35.png" > </div> <div class="production-item">
+                
+                <h3>Дезинфицирующие средства</h3>
+               <p style="color: rgb(0, 0, 0);">Лишь интерактивные прототипы призваны к ответу.</p> <img id="logo-light" src="34.png" > 
+                 </center> </div> </div> 
+
+            
+<center>
+
+                       <div class="production"> <div class="production-grid">
+            
+
+            <div class="production-item"> <h3>Дезинфицирующие средства</h3>
+
+           <p style="color: rgb(0, 0, 0);">Лишь интерактивные прототипы призваны к ответу.</p>
+           <img id="logo-light" src="34.png"> </div> <div class="production-item"> 
+            
+            <h3 class="highlight">Бытовая химия</h3> 
+           <p style="color: rgb(0, 0, 0);">А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p> 
+              <img id="logo-light" src="35.png" > </div> <div class="production-item">
+                
+                <h3>Автомобильная химия</h3>
+               <p style="color: rgb(0, 0, 0);">Безусловно, сложившаяся химия профессионального сообщества позволяет оценить значение формы воздействия.</p> <img id="logo-light" src="36.png" > 
+                 </center> </div> </div> 
+
+            
+
+
+
+
+
+                 <h2>СОБСТВЕННЫЕ ТОРГОВЫЕ МАРКИ</h2> 
+                 <div class="workflow"> 
+                  <div class="workflow-steps"> 
+                    <div class="step">
+
+                  <div class="production"> 
+                    
+                    <div class="production-item"> 
+                      
+                      <h3>Автохимия AG-Tech</h3> 
+                   <p style="color: rgb(0, 0, 0);">Для современнго мира разбавленное <br> изрядной долей эмплатии,рациональное<br> мышление создает предпосылки для <br>поставленных обществом задач</p> 
+                   
+                   
+                   <img id="logo-light" src="AG.png"> </div> <div class="production-item">
+                     
+                    
+                    <h3>Автохимия AP</h3> 
+                     <p style="color: rgb(0, 0, 0);">Для современнго мира разбавленное <br> изрядной долей эмплатии,рациональное<br> мышление создает предпосылки для <br>поставленных обществом задач</p> 
+                    
+                     
+                     <img id="logo-light" src="Aliance5.png"> </div> </div> </div> </div> 
+                    
+                     <section class="two-col"> 
+                      
+                      <div class="left"> 
+                      <img src="Alian.png"> </div>
+                      
+                      <aside class="right"> 
+                       
+                       
+                        <div class="accent-line"></div> 
+                        
+                        <h2>ОТНОШЕНИЕ К ДЕЛУ И К КЛИЕНТАМ</h2> 
+                        
+                        
+                        
+                        <p style="color: rgb(0, 0, 0);">Повседневная практика показывает: системный подход к качеству работы и внимательное отношение к клиенту формируют долгосрочное доверие. Наша команда ориентирована на результат — не ради отчёта, а ради реальной пользы для партнёров и конечных пользователей. С учётом быстро меняющейся экономической и технологической среды особое значение приобретает гибкость процессов и ответственность каждого специалиста.</p>
+                        <a class="more-link" href="#">Подробнее о компании <svg width="20" height="20" viewBox="0 0 24 24" fill="none"> 
+                          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> 
+                        </svg> </a> </aside> </section> 
+                        <script> const header = document.querySelector('header'); 
+
+                          const menuToggle = document.getElementById('menuToggle');
+
+                         const navMenu = document.getElementById('navMenu');
+                          menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+                           window.addEventListener('scroll', () => { if (window.scrollY > 80) header.classList.add('scrolled');
+                            else header.classList.remove('scrolled'); }); </script> </div> 
+                        </div> </div>
+
+
+                         <h1>ПРОИЗВОДИМ АЭРОЗОЛЬНУЮ ПРОДУКЦИЮ ДЛЯ РАЗНЫХ СФЕР</h1> 
+ 
+                <style>
+.industry-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* два столбца */
+  gap: 10px 30px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.industry-list p {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* 📱 На телефоне — один столбец */
+@media (max-width: 600px) {
+  .industry-list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="industry-list">
+  <p>Химические производства</p>
+  <p>Автомойки и автосервисы</p>
+  <p>Пищевая промышленность</p>
+  <p>Лаки и краски</p>
+  <p>Косметические средства</p>
+  <p>Автомобильная косметика</p>
+  <p>Средства по уходу за одеждой</p>
+  <p>Строительные материалы</p>
+  <p>Бытовая химия</p>
+  <p>И многие другие отрасли</p>
+</div>
+
+
+    <style> @media (max-width: 480px) { .industries { padding: 50px 10px; }
+                           h2 { font-size: 24px; margin-bottom: 20px; } .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+                           .logo-item { padding: 15px 10px; min-height: 110px; } 
+
+                         .logo-grid img { max-height: 50px; } .logo-caption { font-size: 12px; margin-top: 8px; } } 
+                         @media (max-width: 360px) 
+                         { .logo-grid { grid-template-columns: repeat(2, 1fr);
+                           gap: 10px; } .logo-item { padding: 12px 8px; min-height: 100px; } } 
+
+          </style> 
+                    
+           <style> body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f5f5f5; color: #b11414; } 
+            .blog-container { max-width: 800px; margin: 0 auto;
+               background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(70, 238, 4, 0.1); } 
+
+            .blog-title { font-size: 24px; font-weight: bold; margin-bottom: 20px; color: #2c3e50; border-bottom: 2px solid #eee;
+               padding-bottom: 10px; } 
+            .blog-content { margin-bottom: 25px; } 
+            .blog-section { margin-bottom: 30px; } 
+            .blog-section-title { font-weight: bold; margin-bottom: 10px; color: #34495e; }
+
+            .blog-full-link { display: inline-block; margin-top: 20px; color: #3498db; 
+              text-decoration: none; font-weight: bold; } 
+            .blog-full-link:hover { text-decoration: underline; } </style>
+</head>
+
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 50px;
+        }
+
+        .content-block {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* Левая часть - Текст */
+        .text-side {
+            flex: 1;
+        }
+
+        .title {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .description {
+            color: #5d6d7e;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #ecf0f1;
+            color: #34495e;
+            position: relative;
+            padding-left: 30px;
+            font-size: 1.1em;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Правая часть - Картинка */
+        .image-side {
+            flex: 1;
+            text-align: center;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .content-block {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .container {
+                padding: 30px;
+            }
+            
+            .title {
+                font-size: 2em;
+            }
+            
+            .image-side {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 1.6em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- ======= ШАПКА ======= -->
-  <header id="header">
-    <div class="logo">
-      <img id="logo-light" src="Aliance4.png" alt="Alliance Production">
-      <img id="logo-dark" src="Aliance1.png" alt="Alliance Production">
+    
+    <div class="content-block">
+            <!-- Левая сторона - Текст -->
+            <div class="text-side">
+          
+       </ul>
+                </div>
+       
+
+
+
+
+<section class="adaptive-grid">
+  <div class="grid-item"><img src="15.png" alt="Автомобильная химия"></div>
+  <div class="grid-item"><img src="15.png" alt="Бытовая химия"></div>
+  <div class="grid-item"><img src="17.png" alt="Дезинфицирующие средства"></div>
+  <div class="grid-item"><img src="15.png" alt="AG-Tech"></div>
+  <div class="grid-item"><img src="15.png" alt="AP"></div>
+  <div class="grid-item"><img src="15.png" alt="Продукт 1"></div>
+  <div class="grid-item"><img src="15.png" alt="Продукт 2"></div>
+  <div class="grid-item"><img src="15.png" alt="Продукт 3"></div>
+</section>
+
+<style>
+/* ======= Адаптивная сетка ======= */
+.adaptive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+  width: 90vw;
+  max-width: 700px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Элемент */
+.adaptive-grid .grid-item img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* При наведении — цвет */
+.adaptive-grid .grid-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Телефоны: чуть меньше и плотнее */
+@media (max-width: 600px) {
+  .adaptive-grid {
+    gap: 15px;
+    width: 95vw;
+  }
+
+  .adaptive-grid .grid-item img {
+    max-width: 90px;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Правая сторона - Картинка -->
+            <div class="image-side">
+  
+            </div>
+        </div>
     </div>
 
-    <div class="menu-toggle" id="menuToggle">
-      <i class="fa-solid fa-bars"></i>
-    </div>
 
-    <nav id="navMenu">
-      <a href="#">О компании</a>
-      <a href="#">Контрактное производство</a>
-      <a href="#">Собственные торговые марки</a>
-      <a href="#">Новости</a>
-      <a href="#">Контакты</a>
-    </nav>
+<div class="workflow"> 
+              <div class="workflow-steps"> 
+              <div class="step"> 
+                <center> 
+                  <div class="production">
+                <div class="production-grid"> <div class="production-item">
+               <h3>Сложно сказать, почему жизнь прекрасна</h3> <p style="color: rgb(0, 0, 0);">
+ Сложно сказать, почему элементы политического процесса функционально размещены на независимые элементы.
+Безусловно, высокотехнологичная концепция общественного уклада создаёт необходимость включения в производственный план.</p>
+              <img id="logo-light" src="20.png"> </div> <div class="production-item"><h3 class="highlight">Современная методология разработки
+одухотворила всех причастных</h3> 
+              <p style="color: rgb(0, 0, 0);">Действия представителей оппозиции, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставляем.</p> 
+          
 
-    <div style="display:flex;align-items:center">
-      <div class="phone">+7 (499) 686-10-14</div>
-      <a href="#" class="btn">Получить консультацию</a>
-    </div>
-  </header>
 
-  <!-- ======= HERO ======= -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Комплексное обеспечение товарами<br>и расходными материалами бизнеса</h1>
-      <p>Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством того, что успех зависит от анализа и качества решений.</p>
-      <a href="#" class="btn">Подробнее о компании</a>
-    </div>
-    <div class="features">
-      <div class="feat"><i class="fa-solid fa-hourglass-half"></i>Непрерывная работа<br>с 2017 года</div>
-      <div class="feat"><i class="fa-solid fa-certificate"></i>Вся продукция<br>сертифицирована</div>
-      <div class="feat"><i class="fa-solid fa-magnifying-glass"></i>Контроль качества<br>на всех этапах</div>
-      <div class="feat"><i class="fa-solid fa-truck"></i>Поставки<br>по всей России</div>
-      <div class="feat"><i class="fa-solid fa-industry"></i>Оперативное<br>производство</div>
-    </div>
-  </section>
+          <p style="color: rgb(233, 228, 228);"></p> <img id="logo-light" src="21.png" > </div>
+          
+              </center>    
 
-  <div class="content-section">
-    <h2>СХЕМА РАБОТЫ</h2>
-    <div class="workflow">
-      <div class="workflow-steps">
-        <div class="step">
-          <span>01</span>
-          <strong>Знакомство</strong><br>Безусловно, сложившаяся структура профессионального сообщества позволяет оценить значение формы воздействия.</br>
-          <a href="#">Оставить заявку</a>
-        </div>
-        <div class="step">
-          <span>02</span>
-          <strong>Заключение договора</strong><br>Лишь интерактивные прототипы призваны к ответу.</br>
-        </div>
-        <div class="step">
-          <span>03</span>
-          <strong>Производство</strong><br>А также стремящиеся вытеснить традиционное производство...</br>
-        </div>
-        <div class="step">
-          <span>04</span>
-          <strong>Доставка</strong><br>Экономическая повестка сегодняшнего дня говорит о возможности...</br>
-        </div>
-      </div>
-    </div>
+ 
 
-    <h2>КОНТРАКТНОЕ ПРОИЗВОДСТВО</h2>
-    <div class="production">
-      <div class="production-grid">
-        <div class="production-item">
-          <h3>Автомобильная химия</h3>
-          <p>Безусловно, сложившаяся химия профессионального сообщества позволяет оценить значение формы воздействия.</p>
-        </div>
-        <div class="production-item">
-          <h3 class="highlight">Бытовая химия</h3>
-          <p>А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p>
-        </div>
-        <div class="production-item">
-          <h3>Дезинфицирующие средства</h3>
-          <p>Лишь интерактивные прототипы призваны к ответу.</p>
-        </div>
-        <div class="production-item">
-          <h3>Пищевые аэрозоли</h3>
-          <p>Безусловно, сложившаяся химия профессионального сообщества позволяет оценить значение формы воздействия.</p>
-        </div>
-        <div class="production-item">
-          <h3>Косметическая продукция</h3>
-          <p>Лишь интерактивные прототипы призваны к ответу.</p>
-        </div>
-        <div class="production-item">
-          <h3>Краски аэрозольные</h3>
-          <p>А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <script>
-    const header = document.querySelector('header');
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
+ 
+               <div class="logo-grid"> 
+              <div class="accent-line"></div> 
+              <div class="workflow"> <div class="workflow-steps">                 
+                <div class="step">
+                       
+      
 
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
+<style>
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+</style>
+<div ="position: absolute; top: 0; left: 0; width: 200%; height: 200%; padding: 30px; color: white;
+ text-shadow: 2px 2px 4px rgba(245, 245, 245, 0.7);">
+</div>
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 80) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
-</body>
-</html>
+            
+<!-- Проблемный тег удалён -->
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f6f8fb;
+  color: #222;
+}  
+        
+                  
+                  
+        
+             
+                     /* Основной контейнер */
+                      .wrapper { display: flex; flex-direction: column; align-items: center;
+
+
+                       justify-content: center; padding: 60px 10%; } 
+
+
+                     /* Заголовок по центру */ 
+                     h1 { text-align: center;
+                      
+                      font-size: 32px; font-weight: 700;
+                      
+                      margin-bottom: 40px; color: #111; }
+
+                      /* Основная часть: картинка + форма */
+
+               content { display: flex; align-items: center;
+                
+                justify-content: space-between; width: 100%;
+                
+                max-width: 1100px;
+                
+                flex-wrap: wrap; gap: 40px; } 
+
+               /* Левая часть — картинка */ 
+               .image { flex: 1; display: flex; 
+                
+                justify-content: center; align-items: center;
+                 min-width: 280px; } 
+                 .image img { width: 100%; 
+                  max-width: 350px; height: auto; } 
+
+                /* Правая часть — форма */ 
+
+
+                .form-container { flex: 1;
+                   min-width: 280px; }
+                   
+                   p { color: #555;
+                     font-size: 16px;
+                      margin-bottom: 20px; 
+                      line-height: 1.5; } 
+
+                form { display: flex; flex-direction: column; gap: 15px; } 
+
+                input[type="text"], input[type="tel"] { padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; outline: none; transition: border-color 0.2s; }
+                 input[type="text"]:focus, input[type="tel"]:focus { border-color: #0078ff; }
+                  button { padding: 12px 25px; background-color: #0078ff; color: white; border: none; border-radius: 6px; font-size: 15px; cursor: pointer; transition: background-color 0.3s; width: fit-content; } button:hover { background-color: #005fcc; } .note { margin-top: 15px; font-size: 13px; color: #777; }
+                   /* --- Адаптивность для телефона --- */ @media (max-width: 768px) 
+                   { .content { flex-direction: column; align-items: center; text-align: center; } 
+                   h1 { font-size: 26px; margin-bottom: 25px; } 
+                   .form-container { width: 100%; }
+                    form { align-items: center; } input, button 
+                    { width: 90%; max-width: 320px; } 
+                    .image img { max-width: 220px; } } 
+                  </style> </head> 
+                  <body>
+                     <div class="wrapper"> <h1>Хотите сотрудничать?</h1> 
+                      <div class="content"> 
+                        
+                        <!-- Левая часть --> 
+                         
+                        <div class="image">  
+                           </div> <!-- Правая часть -->
+                            <div class="form-container"> 
+                              <p style="color: rgb(0, 0, 0);">Оставьте заявку — наш менеджер свяжется с вами в ближайшее время, ответит на все интересующие вопросы и поможет даже в самых сложных случаях!</p> 
+                              <form> <input type="text" placeholder="Имя"> <input type="tel" placeholder="+7 (_) _--"> 
+                                <button type="submit">Отправить заявку</button> </form> 
+               
+                    <div class="note"> Обратившись к нам, вы получите не только профессиональную работу, но и полную конфиденциальность информации. </div> 
+              </div> </body> 
+             </html>
